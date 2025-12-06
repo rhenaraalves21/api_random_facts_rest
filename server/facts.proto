@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package facts;
+
+message Fact {
+    int32 id = 1;
+    string text = 2;
+    string source = 3;
+    string language = 4;
+    string permalink = 5;
+    string saved_at = 6;
+}
+
+message FactsList {
+    repeated Fact facts = 1;
+}
