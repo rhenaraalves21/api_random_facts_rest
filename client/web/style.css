@@ -1,0 +1,97 @@
+body {
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 900px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #135cba;
+}
+
+.danger {
+    background: #cc0000 !important;
+}
+
+.danger:hover {
+    background: #990000 !important;
+}
+
+.fav-btn {
+    background: #ff8800;
+}
+
+.fav-btn:hover {
+    background: #cc6c00;
+}
+
+/* Para deixar a lista de favoritos igual às outras listas */
+.favorite-item {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+.favorite-item p {
+    margin: 4px 0;
+}
+
+
+.panel {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+.result-box {
+    background: #1b1b1b;
+    color: #00ff00;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Consolas, monospace;
+    overflow-x: auto;
+}

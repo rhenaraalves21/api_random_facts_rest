@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Facts - Web Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+    <h1>Random Facts – Web Client</h1>
+
+    <div id="menu">
+        <button onclick="openTab('admin')">Facts Admin</button>
+        <button onclick="openTab('facts')">Facts</button>
+        <button onclick="openTab('fav')">Favoritos</button>
+        <button onclick="openTab('stats')">Estatísticas</button>
+    </div>
+
+    <!-- TAB ADMIN -->
+    <div id="admin" class="tab">
+        <h2>Facts Admin</h2>
+
+        <div class="panel">
+            <h3>Criar Fact</h3>
+            <input id="text" placeholder="Texto do fact">
+            <input id="source" placeholder="Fonte">
+            <input id="lang" placeholder="Idioma (pt, en, es...)">
+            <button onclick="createFact()">Criar Fact</button>
+        </div>
+
+        <div class="panel">
+            <h3>Deletar Fact</h3>
+            <input id="delete_id" placeholder="ID">
+            <button class="danger" onclick="deleteFact()">Deletar</button>
+        </div>
+
+        <div class="panel">
+            <h3>Lista de Facts</h3>
+            <pre id="facts_list" class="result-box"></pre>
+        </div>
+    </div>
+
+    <!-- TAB FACTS -->
+    <div id="facts" class="tab" style="display:none;">
+        <h2>Facts</h2>
+
+        <div class="panel">
+            <h3>Fact do Dia</h3>
+            <pre id="today" class="result-box"></pre>
+            <button onclick="getToday()">Atualizar Fact do Dia</button>
+            <button class="fav-btn" onclick="favoriteToday()">Favoritar</button>
+        </div>
+
+        <div class="panel">
+            <h3>Random Fact</h3>
+            <pre id="random" class="result-box"></pre>
+            <button onclick="getRandom()">Novo Random Fact</button>
+            <button class="fav-btn" onclick="favoriteRandom()">Favoritar</button>
+        </div>
+    </div>
+
+    <!-- TAB FAVORITOS -->
+    <div id="fav" class="tab" style="display:none;">
+        <h2>Favoritos</h2>
+
+        <div class="panel">
+            <h3>Lista de Favoritos</h3>
+            <pre id="fav_list" class="result-box"></pre>
+        </div>
+
+        <div class="panel">
+            <h3>Remover Favorito</h3>
+            <input id="fav_id" placeholder="ID">
+            <button class="danger" onclick="removeFavorite()">Remover</button>
+        </div>
+    </div>
+
+    <!-- TAB STATISTICS -->
+    <div id="stats" class="tab" style="display:none;">
+        <h2>Estatísticas</h2>
+        <div class="panel">
+            <pre id="stats_box" class="result-box"></pre>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

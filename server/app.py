@@ -1,11 +1,17 @@
 from flask import Flask, request, jsonify, Response
+from flask_cors import CORS
 import requests
-import json
 import xml.etree.ElementTree as ET
 from datetime import datetime
-import facts_pb2  # Protocol Buffer gerado
+import facts_pb2
 
 app = Flask(__name__)
+
+# PERMITIR SOMENTE REQUISIÇÕES DO FRONT NA PORTA 5500
+CORS(app, resources={r"/*": {"origins": [
+    "http://localhost:5500",
+    "http://127.0.0.1:5500"
+]}})
 
 # Armazenamento em memória para o CRUD
 facts_storage = {}
